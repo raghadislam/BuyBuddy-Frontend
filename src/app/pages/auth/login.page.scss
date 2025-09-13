@@ -1,0 +1,5 @@
+.auth { max-width: 520px; margin: 40px auto; padding: 24px; display:grid; gap: 12px; }
+label { display:grid; gap: 8px; color: var(--bb-text-dim); }
+.row { display:flex; justify-content: space-between; align-items:center; }
+.or { display:grid; place-items:center; color: var(--bb-text-muted); margin: 4px 0; }
+.foot { text-align:center; margin-top: 10px; }

@@ -1,0 +1,9 @@
+.thread { padding: 14px; display:grid; gap: 12px; }
+.messages { display:grid; gap: 10px; }
+.bubble {
+  max-width: 70%; padding: 10px 12px; border-radius: 14px;
+  background: #1a1d2a; border:1px solid #2b2f40; color:#dfe1ee;
+}
+.bubble.me { margin-left: auto; background: linear-gradient(135deg, var(--bb-primary), var(--bb-primary-700)); color:#fff; }
+.time { margin-left: 8px; font-size: 11px; opacity:.7; }
+.composer { display:flex; gap: 10px; }

@@ -1,0 +1,7 @@
+.list { display:grid; gap: 12px; margin-top: 14px; }
+.row { display:flex; gap:14px; align-items:center; padding:10px; }
+.thumb { width:84px; height:84px; background:center/cover no-repeat; border-radius:12px; }
+.meta { flex:1; }
+.title { font-weight: 700; }
+.checkout { margin-top: 18px; padding: 16px; display:grid; gap: 12px; }
+.line { display:flex; justify-content: space-between; }

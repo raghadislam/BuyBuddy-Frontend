@@ -1,0 +1,43 @@
+<div class="auth bb-card">
+  <h1>Welcome Back!</h1>
+  <p class="muted">Log in to your BuyBuddy account.</p>
+
+  <label
+    >Email
+    <input
+      class="bb-input"
+      [(ngModel)]="email"
+      placeholder="Enter your email"
+    />
+  </label>
+
+  <label
+    >Password
+    <input
+      type="password"
+      class="bb-input"
+      [(ngModel)]="password"
+      placeholder="Enter your password"
+    />
+  </label>
+
+  <div class="row">
+    <label>
+      <input type="checkbox" [(ngModel)]="remember" /> Remember me
+    </label>
+    <a routerLink="/forgot" class="muted">Forgot password?</a>
+  </div>
+
+  <button class="bb-button primary" (click)="login()" [disabled]="loading">
+    {{ loading ? 'Logging in…' : 'Log in' }}
+  </button>
+
+  <div class="or"><span>or</span></div>
+
+  <button class="bb-button ghost">Continue with Google</button>
+
+  <div class="foot muted">
+    Don’t have an account?
+    <a routerLink="/sign-up">Sign up.</a>
+  </div>
+</div>

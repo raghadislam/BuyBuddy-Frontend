@@ -1,0 +1,63 @@
+<header class="bb-glass header">
+  <div class="bb-container header__inner">
+    <a routerLink="/" class="brand">
+      <img src="assets/logo3.png" alt="BuyBuddy" class="logo" />
+      <strong>BuyBuddy</strong>
+    </a>
+
+    <nav class="hide-on-mobile">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+      <a routerLink="/search" routerLinkActive="active">Search</a>
+      <a routerLink="/notifications" routerLinkActive="active">Notifications</a>
+      <a routerLink="/brand/dashboard" routerLinkActive="active">Brand</a>
+    </nav>
+
+    <div class="header__right">
+      <!-- <a routerLink="/cart" class="bb-badge">Cart</a>
+      <a routerLink="/profile" class="avatar">Y</a> -->
+      <ng-container *ngIf="auth.user$ | async as user; else guest">
+        <!-- Logged-in -->
+        <!-- <a routerLink="/cart" class="bb-button ghost">🛒 Cart</a> -->
+        <!-- src/app/layout/shell.component.html (logged-in block) -->
+        <a routerLink="/cart" class="bb-button ghost">
+          🛒 Cart
+          <span
+            class="bb-badge"
+            style="margin-left: 8px"
+            *ngIf="cart.count$ | async as c"
+            >{{ c }}</span
+          >
+        </a>
+        <a routerLink="/profile" class="bb-button primary"
+          >👤 {{ (auth.user$ | async)?.userName }}</a
+        >
+        <button class="bb-button ghost" (click)="onLogout()">Logout</button>
+      </ng-container>
+
+      <ng-template #guest>
+        <a routerLink="/login" class="bb-button ghost">Log in</a>
+        <a routerLink="/sign-up" class="bb-button primary">Sign up</a>
+      </ng-template>
+    </div>
+  </div>
+</header>
+
+<main class="bb-container main">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="bb-footer">
+  <div class="container">
+    <div class="left">© 2025 BuyBuddy</div>
+    <div class="right">
+      <a routerLink="/about">About</a>
+      <a routerLink="/contact">Contact</a>
+      <a routerLink="/terms">Terms</a>
+    </div>
+  </div>
+</footer>

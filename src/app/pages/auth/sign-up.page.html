@@ -1,0 +1,52 @@
+<div class="auth bb-card">
+  <h1>Sign up</h1>
+  <p class="muted">Create your account</p>
+
+  <label
+    >Full Name
+    <input
+      class="bb-input"
+      [(ngModel)]="name"
+      placeholder="Enter your full name"
+    />
+  </label>
+
+  <label
+    >Email
+    <input
+      class="bb-input"
+      [(ngModel)]="email"
+      placeholder="Enter your Email"
+    />
+  </label>
+
+  <label
+    >Username
+    <input
+      class="bb-input"
+      [(ngModel)]="userName"
+      placeholder="Create your username"
+    />
+  </label>
+
+  <label
+    >Password
+    <input
+      type="password"
+      class="bb-input"
+      [(ngModel)]="password"
+      placeholder="Create your password"
+    />
+  </label>
+
+  <label class="muted"
+    ><input type="checkbox" [(ngModel)]="agree" /> I agree to terms &
+    conditions</label
+  >
+
+  <button class="bb-button primary" (click)="submit()">Sign up</button>
+
+  <div class="foot muted">
+    Already have an account? <a routerLink="/login">Log in.</a>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<h2>Chat</h2>
+<div class="list">
+  <a *ngFor="let c of chats" [routerLink]="['/chat', c.id]" class="item bb-card">
+    <div class="avatar">Y</div>
+    <div class="meta">
+      <div class="name">{{c.name}}</div>
+      <div class="last muted">{{c.last}}</div>
+    </div>
+    <span *ngIf="c.unread" class="pill">{{c.unread}}</span>
+  </a>
+</div>

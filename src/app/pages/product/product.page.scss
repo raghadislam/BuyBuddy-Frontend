@@ -1,0 +1,15 @@
+.product { display:grid; grid-template-columns: 1.2fr 1fr; gap: 24px; padding: 18px; }
+.image { border-radius: 16px; min-height: 420px; background: #0f111a center/cover no-repeat; }
+.info { display:grid; gap: 12px; }
+.top { display:flex; justify-content: space-between; align-items: center; }
+.brand { color: var(--bb-text-muted); }
+.price { font-size: 24px; font-weight: 800; margin: 6px 0 10px; }
+.colors { display:grid; gap:8px; }
+.bubbles { display:flex; gap:10px; }
+.bubble { width:26px; height:26px; border-radius:50%; border:1px solid #2a2d3b; }
+.cta { display:flex; gap: 12px; margin-top: 8px; }
+
+@media (max-width: 991px){
+  .product { grid-template-columns: 1fr; }
+  .image { min-height: 300px; }
+}

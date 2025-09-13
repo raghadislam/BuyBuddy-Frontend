@@ -1,0 +1,12 @@
+<div class="thread bb-card">
+  <div class="messages">
+    <div *ngFor="let m of messages" class="bubble" [class.me]="m.fromMe">
+      {{m.text}} <span class="time">{{m.time}}</span>
+    </div>
+  </div>
+
+  <div class="composer">
+    <input class="bb-input" [(ngModel)]="text" placeholder="Write your message…">
+    <button class="bb-button primary" (click)="send()">Send</button>
+  </div>
+</div>

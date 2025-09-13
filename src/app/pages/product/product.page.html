@@ -1,0 +1,56 @@
+<div class="product bb-card">
+  <div class="image" [style.backgroundImage]="'url('+product.image+')'"></div>
+  <div class="info">
+    <div class="top">
+      <span class="brand">{{product.brand}}</span>
+      <span class="bb-badge"
+        >⭐ {{product.rating}} ({{product.ratingCount}})</span
+      >
+    </div>
+    <h1>{{product.title}}</h1>
+    <div class="price">
+      {{product.priceEGP | currency:'EGP':'symbol':'1.0-0'}}
+    </div>
+    <p class="muted">{{product.description}}</p>
+
+    <div class="colors" *ngIf="product.colors?.length">
+      <span>Color</span>
+      <div class="bubbles">
+        <span
+          class="bubble"
+          *ngFor="let c of product.colors"
+          [style.background]="c"
+        ></span>
+      </div>
+    </div>
+
+    <!-- <div class="cta">
+      <button class="bb-button ghost">💬 Chat with seller</button>
+      <button class="bb-button primary">Add to cart</button>
+    </div> -->
+    <!-- <div class="cta">
+      <button class="bb-button ghost">💬 Chat with seller</button>
+      <button
+        class="bb-button primary"
+        (click)="addToCart()"
+        [disabled]="adding"
+      >
+        {{ adding ? 'Adding…' : 'Add to cart' }}
+      </button>
+    </div> -->
+    <!-- src/app/pages/product/product.page.html -->
+    <div class="cta">
+      <button class="bb-button ghost">💬 Chat with seller</button>
+      <button
+        class="bb-button primary"
+        (click)="addToCart()"
+        [disabled]="adding"
+      >
+        {{ adding ? 'Adding…' : 'Add to cart' }}
+      </button>
+    </div>
+    <div class="muted" *ngIf="addMsg" style="margin-top: 6px">{{ addMsg }}</div>
+
+    <div class="muted" *ngIf="addMsg" style="margin-top: 6px">{{ addMsg }}</div>
+  </div>
+</div>

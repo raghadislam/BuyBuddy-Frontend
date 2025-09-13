@@ -1,0 +1,18 @@
+<h2>Your Cart</h2>
+<div class="list">
+  <div *ngFor="let p of items" class="row bb-card">
+    <div class="thumb" [style.backgroundImage]="'url('+p.image+')'"></div>
+    <div class="meta">
+      <div class="brand muted">{{p.brand}}</div>
+      <div class="title">{{p.title}}</div>
+      <div class="price">{{p.priceEGP | currency:'EGP':'symbol':'1.0-0'}}</div>
+    </div>
+    <button class="bb-button ghost">Remove</button>
+  </div>
+</div>
+
+<div class="checkout bb-card">
+  <div class="line"><span>Subtotal</span><strong>{{ total() | currency:'EGP':'symbol':'1.0-0' }}</strong></div>
+  <div class="line"><span>Delivery</span><span class="muted">Calculated at checkout</span></div>
+  <button class="bb-button primary">Check Out</button>
+</div>

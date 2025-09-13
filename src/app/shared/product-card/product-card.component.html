@@ -1,0 +1,18 @@
+<a class="card bb-card" [routerLink]="['/product', product.id]">
+  <div class="image" [style.backgroundImage]="'url('+product.image+')'"></div>
+  <div class="content">
+    <div class="row">
+      <span class="brand">{{product.brand}}</span>
+      <div class="stars" title="{{product.rating}}/5">
+        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span class="dim">⭐</span>
+      </div>
+    </div>
+    <h3>{{product.title}}</h3>
+    <div class="row">
+      <div class="price">{{ product.priceEGP | currency:'EGP':'symbol':'1.0-0' }}</div>
+      <div class="badges" *ngIf="product.badges?.length">
+        <span class="bb-badge" *ngFor="let b of product.badges">{{b}}</span>
+      </div>
+    </div>
+  </div>
+</a>

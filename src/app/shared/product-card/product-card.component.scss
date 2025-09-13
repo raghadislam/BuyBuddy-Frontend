@@ -1,0 +1,13 @@
+.card { display: grid; grid-template-rows: 220px auto; overflow: hidden; }
+.image {
+  background-size: cover; background-position: center;
+  border-bottom: 1px solid var(--bb-border);
+}
+.content { padding: 14px 14px 16px; display: grid; gap: 8px; }
+.brand { color: var(--bb-text-muted); font-size: 12px; }
+.row { display:flex; align-items:center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.price { font-weight: 700; color: #fff; }
+.stars span { font-size: 12px; }
+.stars .dim { filter: grayscale(1) brightness(.6); }
+.badges { display: flex; gap: 6px; }
+h3 { font-size: 15px; margin: 0; }

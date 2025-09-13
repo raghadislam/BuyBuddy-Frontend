@@ -1,0 +1,17 @@
+<section class="hero bb-card">
+  <div class="overlay">
+    <h1>Your style, your brand — all in one place.</h1>
+    <p class="muted">Discover curated fashion with smart search and visual matches.</p>
+    <div>
+      <a class="bb-button primary" routerLink="/search">Start shopping</a>
+      <a class="bb-button ghost" routerLink="/brand/sign-up">Sell on BuyBuddy</a>
+    </div>
+  </div>
+</section>
+
+<section class="grid">
+  <h2>Recommended for you</h2>
+  <div class="grid-list">
+    <bb-product-card *ngFor="let p of data.products" [product]="p"></bb-product-card>
+  </div>
+</section>

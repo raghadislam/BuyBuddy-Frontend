@@ -1,0 +1,6 @@
+.list { display:grid; gap: 10px; margin-top: 10px; }
+.item { display:flex; gap:12px; align-items:center; padding: 10px; }
+.avatar { width:40px; height:40px; display:grid; place-items:center; border-radius:50%; background:#1a1d2a; border:1px solid #2b2f40; }
+.meta { flex:1; }
+.name { font-weight: 700; }
+.pill { background: var(--bb-primary); color:#fff; border-radius: 999px; padding: 4px 10px; font-size: 12px; }
